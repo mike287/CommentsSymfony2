@@ -1,0 +1,23 @@
+<div>
+    EDYTUJESZ WPIS O ID = {{ rows.id }}
+</div>
+<div>
+    <form action="{{ path('editorPusher', {'id': rows.id})}}) }}" method="post">
+        <div> <input type="text" name="editNick" placeholder="{{ rows.nick }}" required></div>
+        <div><textarea name="editComment" placeholder="{{ rows.comment }}" style="width: 220px; height: 75px" required></textarea></div>
+        <input type="submit" value="submit">
+    </form>
+</div>
+
+<table border="1">
+    <tr>
+        <td bgcolor="#faebd7" height="25">id</td>
+        <td bgcolor="#faebd7">nick</td>
+        <td bgcolor="#faebd7" width="500">komentarz</td>
+    <tr>
+        <td>{{ rows.id }}</td>
+        <td>{{ rows.nick }}</td>
+        <td>{{ rows.comment }}</td>
+    </tr>
+
+</table>

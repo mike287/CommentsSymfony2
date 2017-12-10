@@ -1,0 +1,23 @@
+<div>
+    <a href="{{ path('homepage') }}">wroc</a>
+</div>
+
+<table border="1">
+    <td bgcolor="#faebd7">id</td>
+    <td bgcolor="#faebd7">nick</td>
+    <td bgcolor="#faebd7" style="width: 250px">koment</td>
+    <td bgcolor="#faebd7">usun</td>
+    <td bgcolor="#faebd7">edytuj</td>
+
+    {% for entry in rows %}
+        <tr>
+            <td>{{ entry.id }}</td>
+            <td>{{ entry.nick }}</td>
+            <td>{{ entry.comment }}</td>
+            <td><a href="{{ path('deleter', {'id': entry.id})}}">delete</a></td>
+            <td><a href="{{ path('edytor', {'id': entry.id})}}">edit</a></td>
+        </tr>
+
+    {% endfor %}
+</table>
+

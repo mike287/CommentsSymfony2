@@ -1,0 +1,6 @@
+comments:
+    resource: "@CommentsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+

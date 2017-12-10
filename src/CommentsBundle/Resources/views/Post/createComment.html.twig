@@ -1,0 +1,20 @@
+{% if id is defined %}
+stworzono komentarz o id {{ id }}
+{% endif %}
+
+
+<form method="post" action="{{ path("create") }}">
+   <div><input type="text" name="nick" placeholder="nick" required></div>
+    <div><textarea name="comment" placeholder="comment" required></textarea></div>
+        <input type="submit">
+</form>
+
+<a href="{{ path('showAll') }}">pokaz wszystkich</a>
+<div><a href="{{ path('findNick_') }}">znajdz</a></div>
+
+{% if nick is defined %}
+    {{ nick }}
+{% endif %}
+
+
+
